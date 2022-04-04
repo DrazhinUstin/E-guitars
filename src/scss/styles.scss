@@ -32,6 +32,11 @@ a {
     text-decoration: none;
 }
 
+img,
+svg {
+    display: block;
+}
+
 input,
 select {
     background-color: $white;
