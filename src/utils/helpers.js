@@ -33,4 +33,15 @@ const destruct = (data) => {
     });
 };
 
-export { destruct };
+const formatPrice = (price) => {
+    return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    }).format(price / 100);
+};
+
+const getUniqueValues = (data, key) => {
+    return ['all', ...new Set(data.map((item) => item[key]))];
+};
+
+export { destruct, formatPrice, getUniqueValues };

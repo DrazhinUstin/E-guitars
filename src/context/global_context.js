@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import useContentful from '../utils/useContentful';
+import useContentful from '../hooks/useContentful';
 
 const GlobalContext = React.createContext();
 const useGlobalContext = () => useContext(GlobalContext);

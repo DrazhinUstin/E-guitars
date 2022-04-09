@@ -1,0 +1,31 @@
+.sort {
+    @extend %flex-between;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $gray-light;
+    button {
+        width: 1.75rem;
+        height: 1.75rem;
+        @extend %grid-center;
+        border: none;
+        border-radius: $radius;
+        background-color: $clr-primary;
+        color: $white;
+        font-size: 1.25rem;
+        transition: $trans-ease;
+        &:hover {
+            background-color: $clr-primary-2;
+        }
+    }
+    select {
+        border: 2px solid transparent;
+        border-radius: $radius;
+        text-transform: capitalize;
+        &:focus {
+            border-color: $clr-primary;
+        }
+    }
+    p {
+        text-transform: capitalize;
+    }
+}

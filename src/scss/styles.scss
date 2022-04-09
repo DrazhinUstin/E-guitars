@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import 'config';
+@import 'filters';
+@import 'sort';
+@import 'products-grid';
+@import 'products-list';
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,6 +16,7 @@
 
 body {
     color: $black;
+    line-height: 1.5;
 }
 
 h1,
@@ -18,10 +25,6 @@ h3,
 h4 {
     text-transform: capitalize;
     letter-spacing: $spacing;
-}
-
-p {
-    line-height: 1.5;
 }
 
 li {
@@ -42,6 +45,9 @@ select {
     background-color: $white;
     color: $black;
     font-size: 1rem;
+    &:focus {
+        outline: none;
+    }
 }
 
 button {
@@ -49,11 +55,126 @@ button {
     cursor: pointer;
 }
 
-.main {
-    padding: 4rem 0;
+.btn {
+    display: inline-block;
+    padding: 0.5rem;
+    border: none;
+    border-radius: $radius;
+    box-shadow: $shadow-light;
+    background-color: $clr-primary;
+    color: $white;
+    line-height: 1;
+    text-transform: capitalize;
+    letter-spacing: $spacing;
+    transition: $trans-ease;
+    &:hover {
+        background-color: $clr-primary-2;
+    }
+}
+
+.border-btn {
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    border: 1px solid $clr-primary;
+    border-radius: $radius;
+    background-color: transparent;
+    color: $black;
+    line-height: 1;
+    text-transform: capitalize;
+    letter-spacing: $spacing;
+    transition: $trans-ease;
+    &:hover,
+    &.active {
+        box-shadow: $shadow-light;
+        background-color: $clr-primary-2;
+        color: $white;
+    }
+}
+
+.section {
+    margin: 4rem 0;
     &-center {
         max-width: $max-width;
         width: 90vw;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
     }
+    &-title {
+        margin-bottom: 4rem;
+        text-align: center;
+        h2 {
+            font-size: 2rem;
+        }
+        div {
+            width: 5rem;
+            height: 0.25rem;
+            margin: 0 auto;
+            background-color: $clr-primary;
+        }
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.loading {
+    width: 10rem;
+    margin: 4rem auto !important;
+}
+
+.products-filters-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+}
+
+/********** Range Input Styles **********/
+
+/* Range Reset */
+input[type='range'] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+/* Removes default focus */
+input[type='range']:focus {
+    outline: none;
+}
+
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+/* slider track */
+input[type='range']::-webkit-slider-runnable-track {
+    height: 0.5rem;
+    border-radius: $radius;
+    background-color: $gray-light;
+}
+/* slider thumb */
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    margin-top: -0.25rem;
+    border-radius: 50%;
+    background-color: $clr-primary;
+}
+
+/***** Firefox styles *****/
+/* slider track */
+input[type='range']::-moz-range-track {
+    height: 0.5rem;
+    border-radius: $radius;
+    background-color: $gray-light;
+}
+/* slider thumb */
+input[type='range']::-moz-range-thumb {
+    width: 1rem;
+    height: 1rem;
+    border: none;
+    border-radius: 50%;
+    background-color: $clr-primary;
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { destruct } from './helpers';
+import { destruct } from '../utils/helpers';
 
 const contentful = require('contentful');
 

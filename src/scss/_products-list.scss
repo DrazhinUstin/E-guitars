@@ -1,0 +1,25 @@
+.products-list {
+    display: grid;
+    row-gap: 2rem;
+    article {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 2rem;
+        align-items: center;
+        padding-bottom: 2rem;
+        border-bottom: 0.25rem solid $clr-primary;
+        line-height: 1.25;
+        img {
+            width: 20rem;
+            border: 1px solid $gray-light;
+            border-radius: $radius;
+        }
+        h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        p {
+            margin-bottom: 0.5rem;
+        }
+    }
+}

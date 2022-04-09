@@ -1,0 +1,40 @@
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+    gap: 2rem;
+    article {
+        border-radius: $radius;
+        box-shadow: $shadow-light;
+        text-align: center;
+        div {
+            position: relative;
+            a {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, 50%) scale(0);
+            }
+        }
+        img {
+            width: 100%;
+            border: 1px solid $gray-light;
+            border-bottom: none;
+            border-radius: $radius $radius 0 0;
+            transition: $trans-ease;
+        }
+        footer {
+            padding: 0.25rem;
+            border-radius: 0 0 $radius $radius;
+            background-color: $clr-primary;
+            color: $white;
+        }
+        &:hover {
+            img {
+                opacity: 0.7;
+            }
+            a {
+                transform: translate(-50%, 50%) scale(1) rotate(360deg);
+            }
+        }
+    }
+}
