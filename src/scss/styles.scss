@@ -4,6 +4,7 @@
 @import 'sort';
 @import 'products-grid';
 @import 'products-list';
+@import 'single-product';
 
 *,
 *::before,
@@ -51,6 +52,7 @@ select {
 }
 
 button {
+    color: $black;
     font-size: 1rem;
     cursor: pointer;
 }
@@ -90,6 +92,21 @@ button {
         box-shadow: $shadow-light;
         background-color: $clr-primary-2;
         color: $white;
+    }
+}
+
+.amount-btns {
+    display: flex;
+    align-items: center;
+    p {
+        width: 2.5rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+    button {
+        border: none;
+        background-color: transparent;
+        font-size: 1.25rem;
     }
 }
 

@@ -1,0 +1,103 @@
+.single-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    &-images {
+        overflow: hidden;
+        & > div:first-child {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 0.25rem solid $clr-primary;
+            &:hover {
+                .controls button {
+                    margin: 0 0.5rem;
+                }
+            }
+            img {
+                width: 100%;
+                border: 1px solid $gray-light;
+                border-radius: $radius;
+            }
+        }
+        & > div:last-child {
+            display: flex;
+            column-gap: 0.5rem;
+            overflow-x: auto;
+            img {
+                width: 5rem;
+                height: 5rem;
+                border: 1px solid $gray-light;
+                border-radius: $radius;
+                object-fit: cover;
+                opacity: 0.7;
+                cursor: pointer;
+                transition: $trans-ease;
+                &.active,
+                &:hover {
+                    border-color: $clr-primary;
+                    opacity: 1;
+                }
+                &.active {
+                    pointer-events: none;
+                }
+            }
+        }
+        .controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            @extend %flex-between;
+            button {
+                margin: 0 -5rem;
+                border: none;
+                background-color: transparent;
+                color: $gray-light;
+                font-size: 2rem;
+                transition: $trans-ease;
+                &:hover {
+                    color: $gray-dark;
+                }
+            }
+        }
+    }
+    &-info {
+        & > *:not(h2, :last-child) {
+            margin-bottom: 0.75rem;
+        }
+        h2 {
+            margin-bottom: 0.5rem;
+            color: $clr-primary-2;
+        }
+        h4 {
+            display: grid;
+            grid-template-columns: 10rem auto;
+            span {
+                font-weight: 400;
+                letter-spacing: normal;
+                overflow-wrap: anywhere;
+            }
+        }
+    }
+    &-features {
+        margin: 2rem 0;
+        h4 {
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+        ul {
+            column-count: 2;
+            li {
+                display: flex;
+                align-items: flex-start;
+                column-gap: 0.5rem;
+                svg {
+                    flex: 0 0 1rem;
+                    margin-top: 0.25rem;
+                    color: $clr-primary;
+                }
+            }
+        }
+    }
+}
