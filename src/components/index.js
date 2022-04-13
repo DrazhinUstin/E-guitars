@@ -1,3 +1,4 @@
+import CrumbTrail from './CrumbTrail';
 import Featured from './Featured';
 import Filters from './Filters';
 import Sort from './Sort';
@@ -11,6 +12,7 @@ import CartItem from './cart/CartItem';
 import CartTotal from './cart/CartTotal';
 
 export {
+    CrumbTrail,
     Featured,
     Filters,
     Sort,
