@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { FaCheck } from 'react-icons/fa';
 import useContentful from '../hooks/useContentful';
 import { ReactComponent as Loading } from '../assets/loading.svg';
-import { SingleProductImages, AmountButtons } from '../components';
+import { SingleProductImages, AddToCart } from '../components';
 import { formatPrice } from '../utils/helpers';
 
 const SingleProductPage = () => {
@@ -39,14 +39,7 @@ const SingleProductPage = () => {
                     <h4>
                         SKU: <span>{product.id}</span>
                     </h4>
-                    {stock && (
-                        <>
-                            <AmountButtons stock={stock} />
-                            <Link to={'/cart'} className='btn'>
-                                add to cart
-                            </Link>
-                        </>
-                    )}
+                    {stock && <AddToCart product={product} />}
                 </article>
             </div>
             <article className='single-product-features'>

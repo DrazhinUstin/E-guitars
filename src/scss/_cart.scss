@@ -1,0 +1,87 @@
+.cart {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin: 4rem 0;
+    line-height: 1.25;
+    &-item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 0.25rem solid $clr-primary;
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+        img {
+            width: 6rem;
+            height: 6rem;
+            border: 1px solid $gray-light;
+            border-radius: $radius;
+            object-fit: cover;
+            transition: $trans-ease;
+            &:hover {
+                border-color: $clr-primary-2;
+            }
+        }
+        &-title {
+            @extend %flex-between;
+            align-items: flex-start;
+            h4 {
+                margin-bottom: 0.25rem;
+            }
+        }
+        &-total {
+            @extend %flex-between;
+            margin-top: 0.5rem;
+            button {
+                border: none;
+                background-color: transparent;
+                color: $clr-primary-2;
+                font-size: 1.25rem;
+            }
+        }
+        .amount-btns {
+            button {
+                font-size: 1rem;
+            }
+            p {
+                width: 2rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    &-total {
+        align-self: flex-start;
+        padding: 1rem;
+        border: 1px solid $gray-light;
+        border-radius: $radius;
+        text-align: center;
+        h4 {
+            @extend %flex-between;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            span {
+                color: $clr-primary-2;
+            }
+        }
+        a {
+            display: block;
+        }
+        &-line {
+            height: 2rem;
+            @extend %grid-center;
+            span {
+                width: 100%;
+                height: 1px;
+                @extend %flex-center;
+                background-color: $gray-light;
+                &::before {
+                    content: 'or';
+                    padding: 0 0.5rem;
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}

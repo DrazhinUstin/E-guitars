@@ -1,32 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaMinus, FaPlus } from 'react-icons/fa';
 
-const AmountButtons = ({ stock }) => {
-    const [amount, setAmount] = useState(1);
-
-    const decreaseAmount = () => {
-        setAmount((amount) => {
-            amount = amount - 1;
-            if (amount < 1) amount = 1;
-            return amount;
-        });
-    };
-
-    const increaseAmount = () => {
-        setAmount((amount) => {
-            amount = amount + 1;
-            if (amount > stock) amount = stock;
-            return amount;
-        });
-    };
-
+const AmountButtons = ({ amount, toggleAmount }) => {
     return (
         <div className='amount-btns'>
-            <button onClick={decreaseAmount}>
+            <button onClick={() => toggleAmount('decrease')}>
                 <FaMinus />
             </button>
             <p>{amount}</p>
-            <button onClick={increaseAmount}>
+            <button onClick={() => toggleAmount('increase')}>
                 <FaPlus />
             </button>
         </div>
