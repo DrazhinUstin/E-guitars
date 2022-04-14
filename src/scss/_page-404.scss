@@ -1,0 +1,46 @@
+.page-404 {
+    min-height: 100vh;
+    @extend %grid-center;
+    padding: 4rem 0;
+}
+
+.page-404-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    h1 {
+        color: $gray-dark;
+        font-size: 10rem;
+        line-height: 1;
+        text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5,
+            -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93,
+            -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5,
+            -7px 8px #808d93, -8px 7px #cdd2d5;
+        @media screen and (max-width: 500px) {
+            font-size: 8rem;
+        }
+    }
+    & > div {
+        max-width: 30rem;
+        padding: 4rem 0 4rem 2rem;
+        border-left: 0.5rem solid $clr-primary;
+        h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            line-height: 1;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        grid-template-columns: unset;
+        & > div {
+            padding: 2rem 0 0;
+            border-top: 0.5rem solid $clr-primary;
+            border-left: 0;
+        }
+    }
+}

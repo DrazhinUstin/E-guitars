@@ -6,7 +6,12 @@ const CartPage = () => {
     const { cart, clearCart, totalPrice } = useCartContext();
 
     if (!cart.length) {
-        return <EmptyCart />;
+        return (
+            <>
+                <CrumbTrail title='cart' />
+                <EmptyCart />
+            </>
+        );
     }
     return (
         <>

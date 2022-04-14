@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { FaCheck } from 'react-icons/fa';
 import useContentful from '../hooks/useContentful';
 import { ReactComponent as Loading } from '../assets/loading.svg';
+import Page404 from './Page404';
 import { CrumbTrail, SingleProductImages, AddToCart } from '../components';
 import { formatPrice } from '../utils/helpers';
 
@@ -15,7 +16,7 @@ const SingleProductPage = () => {
     }
 
     if (isError) {
-        return <h2 className='section text-center'>Product not found!</h2>;
+        return <Page404 />;
     }
 
     const { brand, title, price, description, features, stock, images } = product;

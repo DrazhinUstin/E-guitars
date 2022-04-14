@@ -7,6 +7,7 @@
 @import 'products-list';
 @import 'single-product';
 @import 'cart';
+@import 'page-404';
 
 *,
 *::before,
@@ -133,6 +134,19 @@ button {
             background-color: $clr-primary;
         }
     }
+}
+
+.page-100 {
+    min-height: 100vh;
+    padding: 4rem 0;
+    &-crumb {
+        min-height: calc(100vh - 2.5rem);
+        padding: 4rem 0;
+    }
+}
+
+.grid-center {
+    @extend %grid-center;
 }
 
 .text-center {
