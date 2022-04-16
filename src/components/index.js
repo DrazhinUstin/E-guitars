@@ -1,3 +1,4 @@
+import Navbar from './Navbar';
 import CrumbTrail from './CrumbTrail';
 import Featured from './Featured';
 import Filters from './Filters';
@@ -12,6 +13,7 @@ import CartItem from './cart/CartItem';
 import CartTotal from './cart/CartTotal';
 
 export {
+    Navbar,
     CrumbTrail,
     Featured,
     Filters,

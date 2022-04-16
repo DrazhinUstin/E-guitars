@@ -1,0 +1,150 @@
+.navbar {
+    height: 5rem;
+    background-color: $black;
+    &-container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+    &-header {
+        @extend %flex-between;
+        &-logo {
+            color: $white;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+        &-toggle-btn {
+            width: 1.5rem;
+            height: 1.5rem;
+            display: none;
+            place-items: center;
+            border: none;
+            background-color: transparent;
+            @media screen and (max-width: 800px) {
+                display: grid;
+            }
+            span {
+                position: relative;
+                width: 100%;
+                height: 3px;
+                background-color: $white;
+                transition: $trans-ease-in-out;
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: -8px;
+                    left: 0;
+                    width: inherit;
+                    height: inherit;
+                    background-color: $white;
+                    transition: inherit;
+                }
+                &::after {
+                    top: 8px;
+                }
+            }
+            &.active span {
+                background-color: transparent;
+                &::before {
+                    top: 0;
+                    transform: rotate(225deg);
+                }
+                &::after {
+                    top: 0;
+                    transform: rotate(-225deg);
+                }
+            }
+        }
+    }
+    &-menu {
+        @extend %flex-between;
+        column-gap: 2rem;
+        &-links {
+            display: flex;
+            column-gap: 2rem;
+            a {
+                color: $white;
+                text-transform: capitalize;
+                letter-spacing: $spacing;
+                transition: $trans-ease;
+                &:hover {
+                    color: $clr-primary-2;
+                }
+            }
+        }
+        &-btns {
+            @extend %flex-center;
+            column-gap: 1rem;
+        }
+        &-auth-btn {
+            height: 2.25rem;
+            @extend %flex-center;
+            column-gap: 0.5rem;
+            padding: 0 1rem;
+            border: none;
+            border-radius: 2rem;
+            background-color: $clr-primary-2;
+            color: $white;
+            text-transform: capitalize;
+            letter-spacing: $spacing;
+            svg {
+                font-size: 1.25rem;
+            }
+        }
+        &-cart-btn {
+            position: relative;
+            color: $white;
+            font-size: 1.75rem;
+            span {
+                position: absolute;
+                top: -0.75rem;
+                right: -0.75rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                @extend %grid-center;
+                border-radius: 50%;
+                background-color: $clr-primary-2;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        &-container {
+            grid-template-columns: unset;
+        }
+        &-menu {
+            position: absolute;
+            top: 5rem;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            transform: translateX(-100%);
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            justify-content: center;
+            padding-bottom: 2rem;
+            border-top: 1px solid $clr-primary-2;
+            background-color: $black;
+            transition: $trans-ease-in-out;
+            z-index: 99;
+            &.active {
+                transform: translateX(0);
+            }
+            &-links {
+                flex-flow: column wrap;
+                row-gap: 2rem;
+                text-align: center;
+                font-size: 1.5rem;
+                a {
+                    // This is for animation which is set in scripts
+                    display: block;
+                    transform: scale(0);
+                }
+            }
+        }
+    }
+}
