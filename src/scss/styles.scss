@@ -9,6 +9,7 @@
 @import 'single-product';
 @import 'cart';
 @import 'page-404';
+@import 'footer';
 
 *,
 *::before,
@@ -138,10 +139,10 @@ button {
 }
 
 .page-100 {
-    min-height: calc(100vh - 5rem);
+    min-height: calc(100vh - 20rem);
     padding: 4rem 0;
     &-crumb {
-        min-height: calc(100vh - 6.5rem);
+        min-height: calc(100vh - 21.5rem);
         padding: 4rem 0;
     }
 }
@@ -152,11 +153,6 @@ button {
 
 .text-center {
     text-align: center;
-}
-
-.loading {
-    width: 10rem;
-    margin: 4rem auto !important;
 }
 
 .products-filters-container {

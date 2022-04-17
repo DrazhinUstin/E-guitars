@@ -1,5 +1,5 @@
 .page-404 {
-    min-height: 100vh;
+    min-height: calc(100vh - 20rem);
     @extend %grid-center;
     padding: 4rem 0;
 }

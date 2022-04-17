@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../context/global_context';
-import { ReactComponent as Loading } from '../assets/loading.svg';
-import { ProductsGrid } from './';
+import { Loading, ProductsGrid } from './';
 
 const Featured = () => {
     const { isLoading, isError, products } = useGlobalContext();
     if (isLoading) {
-        return <Loading className='loading' />;
+        return <Loading />;
     }
     if (isError) {
         return <h2 className='section text-center'>products not found!</h2>;

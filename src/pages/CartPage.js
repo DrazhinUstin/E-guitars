@@ -16,7 +16,7 @@ const CartPage = () => {
     return (
         <>
             <CrumbTrail title='cart' />
-            <section className='section section-center'>
+            <section className='section-center page-100-crumb'>
                 <div className='section-title'>
                     <h2>your cart</h2>
                 </div>

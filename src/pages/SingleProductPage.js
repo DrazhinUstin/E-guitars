@@ -2,9 +2,8 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { FaCheck } from 'react-icons/fa';
 import useContentful from '../hooks/useContentful';
-import { ReactComponent as Loading } from '../assets/loading.svg';
 import Page404 from './Page404';
-import { CrumbTrail, SingleProductImages, AddToCart } from '../components';
+import { Loading, CrumbTrail, SingleProductImages, AddToCart } from '../components';
 import { formatPrice } from '../utils/helpers';
 
 const SingleProductPage = () => {
@@ -12,7 +11,7 @@ const SingleProductPage = () => {
     const { isLoading, isError, data: product } = useContentful(id);
 
     if (isLoading) {
-        return <Loading className='loading' />;
+        return <Loading section />;
     }
 
     if (isError) {
