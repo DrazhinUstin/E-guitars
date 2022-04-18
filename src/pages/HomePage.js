@@ -1,8 +1,13 @@
 import React from 'react';
-import { Featured } from '../components';
+import { HeroSlider, Featured } from '../components';
 
 const HomePage = () => {
-    return <Featured />;
+    return (
+        <>
+            <HeroSlider />
+            <Featured />
+        </>
+    );
 };
 
 export default HomePage;

@@ -1,4 +1,5 @@
 import Navbar from './Navbar';
+import HeroSlider from './HeroSlider';
 import CrumbTrail from './CrumbTrail';
 import Loading from './Loading';
 import Featured from './Featured';
@@ -16,6 +17,7 @@ import Footer from './Footer';
 
 export {
     Navbar,
+    HeroSlider,
     CrumbTrail,
     Loading,
     Featured,
