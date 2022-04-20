@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HomePage, ProductsPage, SingleProductPage, CartPage, Page404 } from './pages';
+import { HomePage, ProductsPage, SingleProductPage, CartPage, AboutPage, Page404 } from './pages';
 import { Navbar, Footer } from './components';
 
 const App = () => {
@@ -12,6 +12,7 @@ const App = () => {
                 <Route path='products' element={<ProductsPage />} />
                 <Route path='products/:id' element={<SingleProductPage />} />
                 <Route path='cart' element={<CartPage />} />
+                <Route path='about' element={<AboutPage />} />
                 <Route path='*' element={<Page404 />} />
             </Routes>
             <Footer />

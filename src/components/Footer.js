@@ -18,7 +18,7 @@ const Footer = () => {
                             <Link to='products'>products</Link>
                         </li>
                         <li>
-                            <Link to='cart'>cart</Link>
+                            <Link to='about'>about</Link>
                         </li>
                     </ul>
                     <div className='footer-menu-icons'>

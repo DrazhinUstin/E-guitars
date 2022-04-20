@@ -44,6 +44,14 @@ const getUniqueValues = (data, key) => {
     return ['all', ...new Set(data.map((item) => item[key]))];
 };
 
+const defineElemHeight = (elem) => {
+    let elemHeight = 0;
+    [...elem.children].forEach((child) => {
+        elemHeight += child.offsetHeight;
+    });
+    return `${elemHeight}px`;
+};
+
 const getStorageItem = (key) => {
     return localStorage.getItem(key) ? JSON.parse(localStorage.getItem(key)) : [];
 };
@@ -52,4 +60,4 @@ const setStorageItem = (key, item) => {
     localStorage.setItem(key, JSON.stringify(item));
 };
 
-export { destruct, formatPrice, getUniqueValues, getStorageItem, setStorageItem };
+export { destruct, formatPrice, getUniqueValues, defineElemHeight, getStorageItem, setStorageItem };

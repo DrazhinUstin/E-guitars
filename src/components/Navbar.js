@@ -57,7 +57,7 @@ const Navbar = () => {
                             <Link to='products'>products</Link>
                         </li>
                         <li>
-                            <Link to='cart'>cart</Link>
+                            <Link to='about'>about</Link>
                         </li>
                     </ul>
                     <div className='navbar-menu-btns'>

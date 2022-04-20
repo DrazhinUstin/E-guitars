@@ -13,6 +13,7 @@ import AmountButtons from './AmountButtons';
 import EmptyCart from './cart/EmptyCart';
 import CartItem from './cart/CartItem';
 import CartTotal from './cart/CartTotal';
+import Accordion from './Accordion';
 import Footer from './Footer';
 
 export {
@@ -31,5 +32,6 @@ export {
     EmptyCart,
     CartItem,
     CartTotal,
+    Accordion,
     Footer,
 };

@@ -1,0 +1,41 @@
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+    gap: 4rem 2rem;
+    padding-top: 2rem;
+    &-item {
+        position: relative;
+        padding: 3rem 1rem 1rem;
+        border: 1px solid $gray-light;
+        border-radius: $radius;
+        box-shadow: $shadow-dark;
+        text-align: center;
+        line-height: 1.25;
+        div:first-child {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 4rem;
+            height: 4rem;
+            @extend %grid-center;
+            border: 1px solid $gray-light;
+            border-radius: 50%;
+            background-color: $white;
+            color: $clr-primary;
+            font-size: 2.5rem;
+        }
+        h4 {
+            margin-bottom: 0.5rem;
+            color: $clr-primary;
+        }
+        &:hover {
+            border-color: $clr-primary;
+            box-shadow: 0 0 0 1px $clr-primary;
+            div:first-child {
+                border-color: $clr-primary;
+                box-shadow: 0 0 0 1px $clr-primary;
+            }
+        }
+    }
+}
