@@ -2,6 +2,11 @@ import image_1 from '../assets/guitars.jpg';
 import image_2 from '../assets/gibson.jpg';
 import image_3 from '../assets/fender.jpg';
 import image_4 from '../assets/epiphone.jpg';
+import brand_image_1 from '../assets/brands/brand_gibson.gif';
+import brand_image_2 from '../assets/brands/brand_esp.gif';
+import brand_image_3 from '../assets/brands/brand_fender.gif';
+import brand_image_4 from '../assets/brands/brand_epiphone.gif';
+import brand_image_5 from '../assets/brands/brand_yamaha.gif';
 import {
     MdSecurity,
     MdSupportAgent,
@@ -20,17 +25,45 @@ const heroData = [
     {
         id: '2',
         image: image_2,
-        title: 'gibson guitar collection',
+        title: 'we provide the best service',
     },
     {
         id: '3',
         image: image_3,
-        title: 'fender guitar collection',
+        title: 'best music instruments',
     },
     {
         id: '4',
         image: image_4,
-        title: 'epiphone guitar collection',
+        title: 'best guarantees',
+    },
+];
+
+const brandsData = [
+    {
+        id: '1',
+        image: brand_image_1,
+        title: 'gibson',
+    },
+    {
+        id: '2',
+        image: brand_image_2,
+        title: 'esp',
+    },
+    {
+        id: '3',
+        image: brand_image_3,
+        title: 'fender',
+    },
+    {
+        id: '4',
+        image: brand_image_4,
+        title: 'epiphone',
+    },
+    {
+        id: '5',
+        image: brand_image_5,
+        title: 'yamaha',
     },
 ];
 
@@ -57,7 +90,7 @@ const servicesData = [
         id: '4',
         icon: <MdSavedSearch />,
         title: 'complete guitar inspection',
-        description: 'Guitar perfection <br /> right out of the box.',
+        description: 'Guitar perfection right out of the box.',
     },
     {
         id: '5',
@@ -118,4 +151,4 @@ const faqData = [
     },
 ];
 
-export { heroData, servicesData, faqData };
+export { heroData, brandsData, servicesData, faqData };

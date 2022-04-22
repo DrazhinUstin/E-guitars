@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeroSlider, Featured, SubscribeForm } from '../components';
+import { HeroSlider, Featured, SubscribeForm, Brands } from '../components';
 
 const HomePage = () => {
     return (
@@ -7,6 +7,7 @@ const HomePage = () => {
             <HeroSlider />
             <Featured />
             <SubscribeForm />
+            <Brands />
         </>
     );
 };

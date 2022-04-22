@@ -1,0 +1,27 @@
+.brands {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+    gap: 1rem;
+    align-items: center;
+    a {
+        @extend %grid-center;
+        padding: 0.5rem;
+        border: 1px solid $gray-dark;
+        border-radius: $radius;
+        overflow: hidden;
+        transition: $trans-ease;
+        &:hover {
+            border-color: $clr-primary-2;
+            box-shadow: 0 0 0 1px $clr-primary-2;
+            img {
+                transform: scale(1.1);
+            }
+        }
+        img {
+            width: 182px;
+            height: 108px;
+            transition: inherit;
+            pointer-events: none;
+        }
+    }
+}

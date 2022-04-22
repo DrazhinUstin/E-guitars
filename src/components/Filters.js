@@ -21,13 +21,14 @@ const Filters = () => {
                     onChange={setFilters}
                 />
             </div>
-            <div className='filters-field brands'>
+            <div className='filters-field brand'>
                 <h4>brand:</h4>
                 {brands.map((brand, index) => {
                     return (
                         <button
                             key={index}
                             name='brand'
+                            data-brand={brand}
                             onClick={setFilters}
                             className={`border-btn ${brand === filters.brand && 'active'}`}
                         >
@@ -46,7 +47,7 @@ const Filters = () => {
                     ))}
                 </select>
             </div>
-            <div className='filters-field colors'>
+            <div className='filters-field color'>
                 <h4>color:</h4>
                 <div>
                     {colors.map((color, index) => {

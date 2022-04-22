@@ -9,14 +9,14 @@
             margin-bottom: 0.25rem;
             line-height: 1;
         }
-        &.brands button {
+        &.brand button {
             display: flex;
             font-size: 0.9rem;
             &:not(:last-of-type) {
                 margin-bottom: 0.5rem;
             }
         }
-        &.colors {
+        &.color {
             & > div {
                 display: flex;
                 flex-flow: row wrap;

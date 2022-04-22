@@ -4,6 +4,7 @@ import CrumbTrail from './CrumbTrail';
 import Loading from './Loading';
 import Featured from './Featured';
 import SubscribeForm from './SubscribeForm';
+import Brands from './Brands';
 import Filters from './Filters';
 import Sort from './Sort';
 import ProductsGrid from './ProductsGrid';
@@ -24,6 +25,7 @@ export {
     Loading,
     Featured,
     SubscribeForm,
+    Brands,
     Filters,
     Sort,
     ProductsGrid,

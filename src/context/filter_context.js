@@ -46,7 +46,7 @@ const FilterProvider = ({ children }) => {
     const setFilters = (e) => {
         let name = e.target.name;
         let value = e.target.value;
-        if (name === 'brand') value = e.target.textContent;
+        if (name === 'brand') value = e.target.dataset.brand;
         if (name === 'color') value = e.target.dataset.color;
         if (name === 'price') value = +value;
         if (name === 'caseIncluded') value = e.target.checked;

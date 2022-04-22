@@ -2,9 +2,10 @@
 @import 'config';
 @import 'navbar';
 @import 'hero-slider';
+@import 'subscribe-form';
+@import 'brands';
 @import 'crumb-trail';
 @import 'filters';
-@import 'subscribe-form';
 @import 'sort';
 @import 'products-grid';
 @import 'products-list';
@@ -89,7 +90,7 @@ button {
     display: inline-flex;
     align-items: center;
     padding: 0 0.5rem;
-    border: 1px solid $clr-primary;
+    border: 1px solid $clr-primary-2;
     border-radius: $radius;
     background-color: transparent;
     color: $black;
