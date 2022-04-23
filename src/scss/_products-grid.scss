@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
     gap: 2rem;
+    align-items: flex-start;
     article {
         border-radius: $radius;
         box-shadow: $shadow-light;
@@ -23,10 +24,14 @@
             transition: $trans-ease;
         }
         footer {
-            padding: 0.25rem;
+            padding: 0.5rem;
             border-radius: 0 0 $radius $radius;
             background-color: $clr-primary;
             color: $white;
+            line-height: 1.25;
+            h4 {
+                margin-bottom: 0.25rem;
+            }
         }
         &:hover {
             img {

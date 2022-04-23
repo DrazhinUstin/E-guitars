@@ -19,6 +19,7 @@ const initState = {
         price: 0,
         maxPrice: 0,
         caseIncluded: false,
+        inStock: false,
     },
 };
 
@@ -46,10 +47,9 @@ const FilterProvider = ({ children }) => {
     const setFilters = (e) => {
         let name = e.target.name;
         let value = e.target.value;
-        if (name === 'brand') value = e.target.dataset.brand;
-        if (name === 'color') value = e.target.dataset.color;
+        if (name === 'brand' || name === 'color') value = e.target.dataset.value;
         if (name === 'price') value = +value;
-        if (name === 'caseIncluded') value = e.target.checked;
+        if (name === 'caseIncluded' || name === 'inStock') value = e.target.checked;
         dispatch({ type: 'SET_FILTERS', payload: { name, value } });
     };
 

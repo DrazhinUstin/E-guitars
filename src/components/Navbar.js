@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart, FaUserPlus } from 'react-icons/fa';
 import { useCartContext } from '../context/cart_context';
+import { ReactComponent as Logo } from '../assets/logo.svg';
 
 const Navbar = () => {
     const { totalAmount } = useCartContext();
@@ -38,7 +39,7 @@ const Navbar = () => {
             <div className='navbar-container section-center' ref={navbarRef}>
                 <header className='navbar-header'>
                     <Link to='/'>
-                        <h1 className='navbar-header-logo'>logotype</h1>
+                        <Logo />
                     </Link>
                     <button
                         className={`navbar-header-toggle-btn ${isMenuOpen && 'active'}`}

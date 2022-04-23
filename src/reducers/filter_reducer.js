@@ -34,7 +34,7 @@ const reducer = (state, action) => {
         case 'FILTER_PRODUCTS': {
             const {
                 all_products,
-                filters: { text, brand, design, color, caseIncluded, price },
+                filters: { text, brand, design, color, caseIncluded, inStock, price },
             } = state;
             let tempProducts = [...all_products];
             if (text) {
@@ -53,6 +53,9 @@ const reducer = (state, action) => {
             }
             if (caseIncluded) {
                 tempProducts = tempProducts.filter((product) => product.caseIncluded);
+            }
+            if (inStock) {
+                tempProducts = tempProducts.filter((product) => product.stock);
             }
             tempProducts = tempProducts.filter((product) => product.price <= price);
             return { ...state, filtered_products: tempProducts };

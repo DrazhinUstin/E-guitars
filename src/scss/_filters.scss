@@ -1,4 +1,16 @@
+.products-filters-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 4rem 2rem;
+    align-items: flex-start;
+    @media screen and (max-width: 800px) {
+        grid-template-columns: unset;
+    }
+}
+
 .filters {
+    position: sticky;
+    top: 1rem;
     &-field {
         margin-bottom: 0.75rem;
         h4 {
@@ -43,7 +55,6 @@
             }
         }
         &.checkbox {
-            margin-bottom: 1rem;
             input {
                 display: none;
                 &:checked ~ label::after {
@@ -69,8 +80,8 @@
                     position: absolute;
                     left: calc(1.25rem / 2);
                     transform: translateX(-50%) scale(0);
-                    width: 0.9rem;
-                    height: 0.9rem;
+                    width: 1rem;
+                    height: 1rem;
                     background-color: $clr-primary-2;
                     transition: $trans-ease;
                 }
@@ -94,6 +105,12 @@
         &:focus {
             border-color: $clr-primary;
             box-shadow: 0 0 0 1px $clr-primary;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        position: unset;
+        input[type='text'] {
+            width: auto;
         }
     }
 }

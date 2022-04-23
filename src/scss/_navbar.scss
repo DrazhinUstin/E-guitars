@@ -8,11 +8,6 @@
     }
     &-header {
         @extend %flex-between;
-        &-logo {
-            color: $white;
-            font-size: 2rem;
-            font-weight: 400;
-        }
         &-toggle-btn {
             width: 1.5rem;
             height: 1.5rem;

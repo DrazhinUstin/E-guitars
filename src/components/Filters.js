@@ -28,7 +28,7 @@ const Filters = () => {
                         <button
                             key={index}
                             name='brand'
-                            data-brand={brand}
+                            data-value={brand}
                             onClick={setFilters}
                             className={`border-btn ${brand === filters.brand && 'active'}`}
                         >
@@ -55,7 +55,7 @@ const Filters = () => {
                             <button
                                 key={index}
                                 name='color'
-                                data-color={color}
+                                data-value={color}
                                 onClick={setFilters}
                                 style={{ background: color !== 'all' ? color : '' }}
                                 className={color === filters.color ? 'active' : ''}
@@ -87,6 +87,16 @@ const Filters = () => {
                     onChange={setFilters}
                 />
                 <label htmlFor='case'>case included</label>
+            </div>
+            <div className='filters-field checkbox'>
+                <input
+                    type='checkbox'
+                    name='inStock'
+                    id='stock'
+                    checked={filters.inStock}
+                    onChange={setFilters}
+                />
+                <label htmlFor='stock'>in stock</label>
             </div>
             <button className='btn' onClick={clearFilters}>
                 clear filters

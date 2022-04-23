@@ -1,10 +1,11 @@
 .sort {
     @extend %flex-between;
+    column-gap: 1rem;
     margin-bottom: 2rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid $gray-light;
     button {
-        width: 1.75rem;
+        flex: 0 0 1.75rem;
         height: 1.75rem;
         @extend %grid-center;
         border: none;
@@ -26,6 +27,8 @@
         }
     }
     p {
+        text-align: center;
+        line-height: 1.25;
         text-transform: capitalize;
     }
 }

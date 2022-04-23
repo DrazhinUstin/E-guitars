@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
+import { ReactComponent as Logo } from '../assets/logo.svg';
 
 const Footer = () => {
     return (
@@ -8,7 +9,7 @@ const Footer = () => {
             <div className='section-center'>
                 <div className='footer-menu'>
                     <Link to='/'>
-                        <h1 className='footer-menu-logo'>logotype</h1>
+                        <Logo />
                     </Link>
                     <ul className='footer-menu-links'>
                         <li>

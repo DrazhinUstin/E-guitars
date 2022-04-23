@@ -4,11 +4,14 @@
     article {
         display: grid;
         grid-template-columns: auto 1fr;
-        column-gap: 2rem;
+        gap: 1rem 2rem;
         align-items: center;
         padding-bottom: 2rem;
         border-bottom: 0.25rem solid $clr-primary;
-        line-height: 1.25;
+        &:last-child {
+            padding-bottom: unset;
+            border-bottom: unset;
+        }
         img {
             width: 20rem;
             border: 1px solid $gray-light;
@@ -20,6 +23,9 @@
         }
         p {
             margin-bottom: 0.5rem;
+        }
+        @media screen and (max-width: 992px) {
+            grid-template-columns: unset;
         }
     }
 }

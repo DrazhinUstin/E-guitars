@@ -6,10 +6,6 @@
     &-menu {
         @extend %flex-center;
         column-gap: 2rem;
-        &-logo {
-            color: $white;
-            font-weight: 400;
-        }
         &-links {
             display: flex;
             flex-flow: column wrap;
