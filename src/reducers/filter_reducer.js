@@ -72,6 +72,7 @@ const reducer = (state, action) => {
                     price: state.filters.maxPrice,
                     maxPrice: state.filters.maxPrice,
                     caseIncluded: false,
+                    inStock: false,
                 },
             };
         default:

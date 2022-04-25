@@ -41,7 +41,7 @@ const SingleProductPage = () => {
                         <h4>
                             SKU: <span>{product.id}</span>
                         </h4>
-                        {stock && <AddToCart product={product} />}
+                        {stock > 0 && <AddToCart product={product} />}
                     </article>
                 </div>
                 <article className='single-product-features'>

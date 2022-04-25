@@ -2,6 +2,7 @@
 @import 'config';
 @import 'navbar';
 @import 'hero-slider';
+@import 'slider';
 @import 'subscribe-form';
 @import 'brands';
 @import 'crumb-trail';
@@ -134,11 +135,12 @@ button {
         text-align: center;
         h2 {
             font-size: 2rem;
+            line-height: 1.25;
         }
         div {
             width: 5rem;
             height: 0.25rem;
-            margin: 0 auto;
+            margin: 0.25rem auto 0;
             background-color: $clr-primary;
         }
     }

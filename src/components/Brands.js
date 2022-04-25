@@ -25,7 +25,7 @@ const Brands = () => {
                             to='/products'
                             key={id}
                             name='brand'
-                            data-brand={title}
+                            data-value={title}
                             onClick={handleClick}
                         >
                             <img src={image} alt={title} />

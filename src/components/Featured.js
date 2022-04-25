@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../context/global_context';
-import { Loading, ProductsGrid } from './';
+import { Loading, Slider, ProductsGrid } from './';
 
 const Featured = () => {
     const { isLoading, isError, products } = useGlobalContext();
@@ -11,13 +11,18 @@ const Featured = () => {
     if (isError) {
         return <h2 className='section text-center'>products not found!</h2>;
     }
+    const featuredProducts = products.filter((product) => product.inFeatured);
     return (
         <section className='section section-center'>
             <div className='section-title'>
                 <h2>featured</h2>
                 <div></div>
             </div>
-            <ProductsGrid products={products.filter((product) => product.inFeatured)} />
+            {featuredProducts.length > 3 ? (
+                <Slider products={featuredProducts} />
+            ) : (
+                <ProductsGrid products={featuredProducts} />
+            )}
             <div className='text-center' style={{ marginTop: '4rem' }}>
                 <Link to='products' className='btn'>
                     see all products

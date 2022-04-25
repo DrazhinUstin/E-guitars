@@ -3,6 +3,7 @@ import HeroSlider from './HeroSlider';
 import CrumbTrail from './CrumbTrail';
 import Loading from './Loading';
 import Featured from './Featured';
+import Slider from './Slider';
 import SubscribeForm from './SubscribeForm';
 import Brands from './Brands';
 import Filters from './Filters';
@@ -24,6 +25,7 @@ export {
     CrumbTrail,
     Loading,
     Featured,
+    Slider,
     SubscribeForm,
     Brands,
     Filters,

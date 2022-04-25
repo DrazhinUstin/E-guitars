@@ -13,7 +13,8 @@
             border-bottom: unset;
         }
         img {
-            width: 20rem;
+            max-width: 20rem;
+            width: 100%;
             border: 1px solid $gray-light;
             border-radius: $radius;
         }
