@@ -39,7 +39,6 @@
                 margin-bottom: 1rem;
                 color: $white;
                 font-size: 2rem;
-                line-height: 1.25;
                 @media screen and (max-width: 800px) {
                     font-size: 1.75rem;
                 }
@@ -66,8 +65,8 @@
                 opacity: 1;
             }
             @media screen and (max-width: 800px) {
-                font-size: 2.5rem;
                 margin: 0 0.5rem;
+                font-size: 2.5rem;
             }
         }
     }

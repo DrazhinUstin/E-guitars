@@ -81,8 +81,7 @@
             border-radius: 2rem;
             background-color: $clr-primary-2;
             color: $white;
-            text-transform: capitalize;
-            letter-spacing: $spacing;
+            @extend %btn;
             svg {
                 font-size: 1.25rem;
             }
@@ -112,7 +111,7 @@
             grid-template-columns: unset;
         }
         &-menu {
-            position: absolute;
+            position: fixed;
             top: 5rem;
             left: 0;
             bottom: 0;

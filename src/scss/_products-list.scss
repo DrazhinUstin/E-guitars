@@ -24,6 +24,9 @@
         }
         p {
             margin-bottom: 0.5rem;
+            &:last-of-type {
+                margin-bottom: 0.75rem;
+            }
         }
         @media screen and (max-width: 992px) {
             grid-template-columns: unset;

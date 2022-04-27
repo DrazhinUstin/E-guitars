@@ -16,6 +16,7 @@
 @import 'services';
 @import 'accordion';
 @import 'page-404';
+@import 'scroll-up-btn';
 @import 'footer';
 
 *,
@@ -25,6 +26,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -38,6 +43,11 @@ h3,
 h4 {
     text-transform: capitalize;
     letter-spacing: $spacing;
+}
+
+h1,
+h2 {
+    line-height: 1.25;
 }
 
 li {
@@ -77,10 +87,7 @@ button {
     box-shadow: $shadow-light;
     background-color: $clr-primary;
     color: $white;
-    line-height: 1;
-    text-transform: capitalize;
-    letter-spacing: $spacing;
-    transition: $trans-ease;
+    @extend %btn;
     &:hover {
         background-color: $clr-primary-2;
     }
@@ -95,10 +102,7 @@ button {
     border-radius: $radius;
     background-color: transparent;
     color: $black;
-    line-height: 1;
-    text-transform: capitalize;
-    letter-spacing: $spacing;
-    transition: $trans-ease;
+    @extend %btn;
     &:hover,
     &.active {
         box-shadow: $shadow-light;
@@ -135,7 +139,6 @@ button {
         text-align: center;
         h2 {
             font-size: 2rem;
-            line-height: 1.25;
         }
         div {
             width: 5rem;

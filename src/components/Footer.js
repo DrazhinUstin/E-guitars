@@ -24,7 +24,7 @@ const Footer = () => {
                     </ul>
                     <div className='footer-menu-icons'>
                         <a
-                            href='https://github.com/DrazhinUstin/E-Commerse_React'
+                            href='https://github.com/DrazhinUstin/E-guitars'
                             target='_blank'
                             rel='noopener noreferrer'
                         >
@@ -33,7 +33,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='footer-copyright'>
-                    <p>&copy; {new Date().getFullYear()} All rights reserved</p>
+                    <p>&copy; {new Date().getFullYear()} E-guitars. All rights reserved.</p>
                 </div>
             </div>
         </footer>

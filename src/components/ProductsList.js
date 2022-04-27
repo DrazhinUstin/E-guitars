@@ -13,7 +13,7 @@ const ProductsList = ({ products = [] }) => {
                         <div>
                             <h4>{title}</h4>
                             <p>{formatPrice(price)}</p>
-                            <p>{description.substring(0, 150)}...</p>
+                            <p>{description.substring(0, 150).trim()}...</p>
                             <Link to={`/products/${id}`} className='btn'>
                                 details
                             </Link>

@@ -41,7 +41,8 @@ const formatPrice = (price) => {
 };
 
 const getUniqueValues = (data, key) => {
-    return ['all', ...new Set(data.map((item) => item[key]))];
+    const values = data.map((item) => item[key]).sort();
+    return ['all', ...new Set(values)];
 };
 
 const defineElemHeight = (elem) => {

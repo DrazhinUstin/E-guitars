@@ -17,6 +17,7 @@ import EmptyCart from './cart/EmptyCart';
 import CartItem from './cart/CartItem';
 import CartTotal from './cart/CartTotal';
 import Accordion from './Accordion';
+import ScrollUpBtn from './ScrollUpBtn';
 import Footer from './Footer';
 
 export {
@@ -39,5 +40,6 @@ export {
     CartItem,
     CartTotal,
     Accordion,
+    ScrollUpBtn,
     Footer,
 };

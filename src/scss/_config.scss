@@ -30,6 +30,13 @@ $trans-ease-in-out: all 0.25s ease-in-out;
     align-items: center;
 }
 
+%btn {
+    line-height: 1;
+    text-transform: capitalize;
+    letter-spacing: $spacing;
+    transition: $trans-ease;
+}
+
 @keyframes scaling {
     0% {
         transform: scale(0);

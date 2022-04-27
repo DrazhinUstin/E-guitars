@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HomePage, ProductsPage, SingleProductPage, CartPage, AboutPage, Page404 } from './pages';
-import { Navbar, Footer } from './components';
+import { Navbar, ScrollUpBtn, Footer } from './components';
 
 const App = () => {
     return (
@@ -15,6 +15,7 @@ const App = () => {
                 <Route path='about' element={<AboutPage />} />
                 <Route path='*' element={<Page404 />} />
             </Routes>
+            <ScrollUpBtn />
             <Footer />
         </Router>
     );
