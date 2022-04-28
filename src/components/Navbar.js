@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { FaShoppingCart, FaUserPlus } from 'react-icons/fa';
+import { FaShoppingCart } from 'react-icons/fa';
 import { useCartContext } from '../context/cart_context';
 import { ReactComponent as Logo } from '../assets/logo.svg';
+import AuthBtn from './AuthBtn';
 
 const Navbar = () => {
     const { totalAmount } = useCartContext();
@@ -62,10 +63,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <div className='navbar-menu-btns'>
-                        <button className='navbar-menu-auth-btn'>
-                            login
-                            <FaUserPlus />
-                        </button>
+                        <AuthBtn />
                         <Link to='cart' className='navbar-menu-cart-btn'>
                             <FaShoppingCart />
                             <span>{totalAmount}</span>
