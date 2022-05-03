@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
 import { useCartContext } from '../context/cart_context';
-import { CrumbTrail, EmptyCart, Loading } from '../components';
+import { CrumbTrail, EmptyCart, StripeElements, Loading } from '../components';
 
 const CheckoutPage = () => {
     const { cart } = useCartContext();
@@ -18,6 +18,7 @@ const CheckoutPage = () => {
                         <h2>hello, {user.name}!</h2>
                         <div></div>
                     </div>
+                    <StripeElements />
                 </section>
             )}
         </>

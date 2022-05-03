@@ -1,0 +1,43 @@
+#payment-form {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: $radius;
+    box-shadow: $shadow-dark;
+    background-color: $off-white;
+    @media screen and (max-width: 500px) {
+        padding: 2rem 1rem;
+    }
+    &-message {
+        max-width: 40rem;
+        margin: 0 auto 1rem;
+        a,
+        span {
+            color: $clr-primary-2;
+            font-weight: 500;
+        }
+    }
+    &-error {
+        margin-top: 0.5rem;
+        color: $clr-primary-2;
+        text-align: center;
+        line-height: 1.25;
+    }
+    .btn {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 0 0 $radius $radius;
+        &:disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+}
+
+#card-element {
+    width: 100%;
+    max-height: 44px;
+    padding: 0.5rem;
+    border-radius: $radius $radius 0 0;
+    background: $white;
+}
