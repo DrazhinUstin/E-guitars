@@ -4,7 +4,7 @@ This project was created using [Create React App](https://github.com/facebook/cr
 
 ## Description
 
-E-guitars is an _e-commerce_ project that includes a functional shopping cart, displaying and filtering products by many parameters, convenient page navigation and other features.
+E-guitars is an _e-commerce_ project that includes a functional shopping cart, displaying and filtering products by many parameters, convenient page navigation, user authentication, online payments and other features.
 
 ## Installation
 

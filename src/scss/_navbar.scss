@@ -124,6 +124,7 @@
             border-top: 1px solid $clr-primary-2;
             background-color: $black;
             transition: $trans-ease-in-out;
+            transition-property: transform;
             z-index: 99;
             &.active {
                 transform: translateX(0);

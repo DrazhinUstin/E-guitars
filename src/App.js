@@ -15,7 +15,7 @@ import { Loading, Navbar, ScrollUpBtn, Footer } from './components';
 const App = () => {
     const { isLoading } = useAuth0();
     if (isLoading) {
-        return <Loading section />;
+        return <Loading section className='min-100 grid-center' />;
     }
     return (
         <>

@@ -19,6 +19,7 @@ import CartItem from './cart/CartItem';
 import CartTotal from './cart/CartTotal';
 import StripeElements from './stripe/StripeElements';
 import Accordion from './Accordion';
+import CopyBtn from './CopyBtn';
 import ScrollUpBtn from './ScrollUpBtn';
 import Footer from './Footer';
 
@@ -44,6 +45,7 @@ export {
     CartTotal,
     StripeElements,
     Accordion,
+    CopyBtn,
     ScrollUpBtn,
     Footer,
 };

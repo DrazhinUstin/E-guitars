@@ -17,6 +17,7 @@
 @import 'services';
 @import 'accordion';
 @import 'page-404';
+@import 'copy-btn';
 @import 'scroll-up-btn';
 @import 'footer';
 
@@ -78,6 +79,9 @@ button {
     color: $black;
     font-size: 1rem;
     cursor: pointer;
+    &:disabled {
+        cursor: default;
+    }
 }
 
 .btn {
@@ -138,6 +142,7 @@ button {
     &-title {
         margin-bottom: 4rem;
         text-align: center;
+        overflow-wrap: anywhere;
         h2 {
             font-size: 2rem;
         }
@@ -157,6 +162,10 @@ button {
         min-height: calc(100vh - 21.5rem);
         padding: 4rem 0;
     }
+}
+
+.min-100 {
+    min-height: 100vh;
 }
 
 .grid-center {

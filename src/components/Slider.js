@@ -62,7 +62,7 @@ const Slider = ({ products }) => {
         handleResize();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
-    }, [slidesFit]);
+    }, [slidesFit]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <>

@@ -1,0 +1,30 @@
+.copy-btn {
+    position: relative;
+    display: inline-block;
+    margin-left: 0.25rem;
+    border: none;
+    background-color: transparent;
+    color: $clr-primary;
+    &::after {
+        content: 'Copied!';
+        position: absolute;
+        top: -0.25rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        padding: 0.25rem;
+        border-radius: $radius;
+        box-shadow: $shadow-light;
+        background-color: $clr-primary-2;
+        color: $white;
+        opacity: 0;
+        visibility: hidden;
+        font-size: 0.85rem;
+        line-height: 1;
+        transition: $trans-ease-in-out;
+    }
+    &.copied::after {
+        transform: translate(-50%, -100%);
+        opacity: 1;
+        visibility: visible;
+    }
+}

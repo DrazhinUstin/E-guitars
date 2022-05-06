@@ -11,8 +11,8 @@
     &-message {
         max-width: 40rem;
         margin: 0 auto 1rem;
-        a,
-        span {
+        & > a,
+        & > span {
             color: $clr-primary-2;
             font-weight: 500;
         }
@@ -36,7 +36,6 @@
 
 #card-element {
     width: 100%;
-    max-height: 44px;
     padding: 0.5rem;
     border-radius: $radius $radius 0 0;
     background: $white;

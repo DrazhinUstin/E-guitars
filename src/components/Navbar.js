@@ -11,9 +11,13 @@ const Navbar = () => {
     const navbarRef = useRef(null);
 
     useEffect(() => {
-        const menuLinks = navbarRef.current.querySelectorAll('ul a');
+        const navbar = navbarRef.current;
+        const menu = navbar.querySelector('.navbar-menu');
+        const menuLinks = menu.querySelectorAll('ul a');
         if (isMenuOpen) {
             document.body.style.overflow = 'hidden';
+            const { y } = navbar.getBoundingClientRect();
+            menu.style.top = `${navbar.offsetHeight + y}px`;
             menuLinks.forEach((link, index) => {
                 link.style.animation = `scaling 0.4s ease ${0.25 + index / 2}s forwards`;
             });

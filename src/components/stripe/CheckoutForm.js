@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useCartContext } from '../../context/cart_context';
 import { formatPrice } from '../../utils/helpers';
+import CopyBtn from '../CopyBtn';
 
 const CheckoutForm = () => {
     const [succeeded, setSucceeded] = useState(false);
@@ -98,6 +99,7 @@ const CheckoutForm = () => {
                     Your total is <span>{formatPrice(totalPrice)}</span>
                     <br />
                     Test Card Number: 4242 4242 4242 4242
+                    <CopyBtn clipText='4242 4242 4242 4242' />
                 </p>
             )}
             <form id='payment-form' onSubmit={handleSubmit}>
