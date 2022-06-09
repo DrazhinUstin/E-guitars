@@ -33,17 +33,13 @@
             }
         }
         svg {
-            position: absolute;
-            top: 50%;
-            left: 0.25rem;
+            @include absolute($top: 50%, $left: 0.25rem);
             transform: translateY(-50%);
             color: $gray-dark;
             font-size: 1.5rem;
         }
         .error {
-            position: absolute;
-            top: 0;
-            left: 0;
+            @include absolute($top: 0, $left: 0);
             transform: translateY(-100%);
             color: $clr-primary-2;
             font-style: italic;

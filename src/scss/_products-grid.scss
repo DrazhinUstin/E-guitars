@@ -10,10 +10,8 @@
         div {
             position: relative;
             a {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, 50%) scale(0);
+                @include absolute($top: 50%, $left: 50%);
+                transform: translate(-50%, -50%) scale(0);
             }
         }
         img {
@@ -38,7 +36,7 @@
                 opacity: 0.7;
             }
             a {
-                transform: translate(-50%, 50%) scale(1) rotate(360deg);
+                transform: translate(-50%, -50%) scale(1) rotate(360deg);
             }
         }
     }

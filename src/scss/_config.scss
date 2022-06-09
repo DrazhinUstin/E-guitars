@@ -5,7 +5,10 @@ $white: #fff;
 $off-white: #e7e7eb;
 $gray-light: #d3d3d3;
 $gray-dark: #acacac;
-$max-width: 1200px;
+$max-content-width: 1200px;
+$navbar-height: 5rem;
+$footer-height: 15rem;
+$crumb-trail-height: 1.5rem;
 $radius: 0.25rem;
 $spacing: 0.1rem;
 $shadow-light: 0 2px 2px rgba(0, 0, 0, 0.1);
@@ -13,21 +16,68 @@ $shadow-dark: 0 2px 2px rgba(0, 0, 0, 0.2);
 $trans-ease: all 0.4s ease;
 $trans-ease-in-out: all 0.25s ease-in-out;
 
-%grid-center {
+$sizes: (
+    sm: '(max-width: 500px)',
+    md: '(max-width: 800px)',
+    lg: '(max-width: 992px)',
+);
+
+@mixin for-size($size) {
+    // If the key exists in the map
+    @if map-has-key($sizes, $size) {
+        // Prints a media query based on the value
+        @media screen and #{map-get($sizes, $size)} {
+            @content;
+        }
+    }
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Warning: no value could be retrieved from `#{$size}`. "
+        + "Available sizes are: #{map-keys($sizes)}.";
+    }
+}
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin absolute($args...) {
+    @include position(absolute, $args...);
+}
+
+@mixin fixed($args...) {
+    @include position(fixed, $args...);
+}
+
+@mixin sticky($args...) {
+    @include position(sticky, $args...);
+}
+
+@mixin grid-center {
     display: grid;
     place-items: center;
 }
 
-%flex-center {
+@mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-%flex-between {
+@mixin flex-between {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@mixin circle($diameter) {
+    width: $diameter;
+    height: $diameter;
+    border-radius: 50%;
 }
 
 %btn {

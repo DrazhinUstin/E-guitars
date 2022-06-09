@@ -12,15 +12,11 @@
         text-align: center;
         line-height: 1.25;
         div:first-child {
-            position: absolute;
-            top: 0;
-            left: 50%;
+            @include absolute($top: 0, $left: 50%);
             transform: translate(-50%, -50%);
-            width: 4rem;
-            height: 4rem;
-            @extend %grid-center;
+            @include circle(4rem);
+            @include grid-center;
             border: 1px solid $gray-light;
-            border-radius: 50%;
             background-color: $white;
             color: $clr-primary;
             font-size: 2.5rem;

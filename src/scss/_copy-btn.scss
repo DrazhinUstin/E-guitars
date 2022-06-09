@@ -7,9 +7,7 @@
     color: $clr-primary;
     &::after {
         content: 'Copied!';
-        position: absolute;
-        top: -0.25rem;
-        left: 50%;
+        @include absolute($top: -0.25rem, $left: 50%);
         transform: translate(-50%, 0);
         padding: 0.25rem;
         border-radius: $radius;

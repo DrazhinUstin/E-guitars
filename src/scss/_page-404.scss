@@ -1,6 +1,6 @@
 .page-404 {
-    min-height: calc(100vh - 20rem);
-    @extend %grid-center;
+    @extend .page-100;
+    @include grid-center;
     padding: 4rem 0;
 }
 
@@ -18,7 +18,7 @@
             -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93,
             -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5,
             -7px 8px #808d93, -8px 7px #cdd2d5;
-        @media screen and (max-width: 500px) {
+        @include for-size(sm) {
             font-size: 8rem;
         }
     }
@@ -34,7 +34,7 @@
             margin-bottom: 1rem;
         }
     }
-    @media screen and (max-width: 800px) {
+    @include for-size(md) {
         grid-template-columns: unset;
         & > div {
             padding: 2rem 0 0;

@@ -1,5 +1,5 @@
 .sort {
-    @extend %flex-between;
+    @include flex-between;
     column-gap: 1rem;
     margin-bottom: 2rem;
     padding-bottom: 0.5rem;
@@ -7,7 +7,7 @@
     button {
         flex: 0 0 1.75rem;
         height: 1.75rem;
-        @extend %grid-center;
+        @include grid-center;
         border: none;
         border-radius: $radius;
         background-color: $clr-primary;

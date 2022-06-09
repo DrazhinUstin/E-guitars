@@ -1,10 +1,10 @@
 .footer {
-    height: 15rem;
+    height: $footer-height;
+    @include grid-center;
     background-color: $black;
     color: $white;
-    @extend %grid-center;
     &-menu {
-        @extend %flex-center;
+        @include flex-center;
         column-gap: 2rem;
         &-links {
             display: flex;
@@ -41,7 +41,7 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@include for-size(md) {
     .footer {
         &-menu {
             flex-flow: column wrap;

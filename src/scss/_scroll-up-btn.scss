@@ -1,13 +1,9 @@
 .scroll-up-btn {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    @include fixed($bottom: 2rem, $right: 2rem);
+    @include circle(2.5rem);
     display: none;
     place-items: center;
     border: none;
-    border-radius: 50%;
     box-shadow: $shadow-dark;
     background-color: $clr-primary;
     color: $white;

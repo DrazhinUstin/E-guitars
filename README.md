@@ -10,7 +10,7 @@ E-guitars is an _e-commerce_ project that includes a functional shopping cart, d
 
 1. Download zip file or Clone Repo
 2. Open your Terminal and `cd` to your local copy of the repo
-3. Run `nmp install`
+3. Run `npm install`
 4. Run `npm start`
 
 ## Live version

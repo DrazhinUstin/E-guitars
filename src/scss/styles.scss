@@ -80,7 +80,7 @@ button {
     font-size: 1rem;
     cursor: pointer;
     &:disabled {
-        cursor: default;
+        cursor: not-allowed;
     }
 }
 
@@ -134,7 +134,7 @@ button {
 .section {
     margin: 4rem 0;
     &-center {
-        max-width: $max-width;
+        max-width: $max-content-width;
         width: 90vw;
         margin-left: auto;
         margin-right: auto;
@@ -156,10 +156,10 @@ button {
 }
 
 .page-100 {
-    min-height: calc(100vh - 20rem);
+    min-height: calc(100vh - $navbar-height - $footer-height);
     padding: 4rem 0;
     &-crumb {
-        min-height: calc(100vh - 21.5rem);
+        min-height: calc(100vh - $navbar-height - $crumb-trail-height - $footer-height);
         padding: 4rem 0;
     }
 }
@@ -169,7 +169,7 @@ button {
 }
 
 .grid-center {
-    @extend %grid-center;
+    @include grid-center;
 }
 
 .text-center {

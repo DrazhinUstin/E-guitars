@@ -44,11 +44,10 @@
             }
         }
         .controls {
-            position: absolute;
-            top: 50%;
+            @include absolute($top: 50%);
             transform: translateY(-50%);
             width: 100%;
-            @extend %flex-between;
+            @include flex-between;
             button {
                 margin: 0 -5rem;
                 border: none;
@@ -100,7 +99,7 @@
             }
         }
     }
-    @media screen and (max-width: 800px) {
+    @include for-size(md) {
         grid-template-columns: unset;
         &-features ul {
             column-count: unset;

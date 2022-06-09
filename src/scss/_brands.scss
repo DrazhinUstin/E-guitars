@@ -4,7 +4,7 @@
     gap: 1rem;
     align-items: center;
     a {
-        @extend %grid-center;
+        @include grid-center;
         padding: 0.5rem;
         border: 1px solid $gray-dark;
         border-radius: $radius;

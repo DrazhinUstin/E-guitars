@@ -4,7 +4,7 @@
     overflow-x: auto;
     &-item {
         position: relative;
-        height: 1.5rem;
+        height: $crumb-trail-height;
         flex-shrink: 0;
         padding: 0 0.5rem;
         background-color: $clr-primary;
@@ -16,8 +16,7 @@
         }
         &:not(:first-child)::before {
             content: '';
-            position: absolute;
-            left: -0.75rem;
+            @include absolute($left: -0.75rem);
             border-top: 0.75rem solid $clr-primary;
             border-bottom: 0.75rem solid $clr-primary;
             border-left: 0.75rem solid transparent;
@@ -25,8 +24,7 @@
         }
         &::after {
             content: '';
-            position: absolute;
-            right: -0.75rem;
+            @include absolute($right: -0.75rem);
             border-top: 0.75rem solid transparent;
             border-bottom: 0.75rem solid transparent;
             border-left: 0.75rem solid $clr-primary;

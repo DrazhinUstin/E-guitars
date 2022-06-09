@@ -8,7 +8,7 @@
             border-bottom: 0;
         }
         &-header {
-            @extend %flex-between;
+            @include flex-between;
             column-gap: 0.5rem;
             padding: 0.5rem;
             cursor: pointer;
@@ -49,9 +49,7 @@
                 border-top: 2px solid transparent;
                 &::after {
                     content: '';
-                    position: absolute;
-                    top: -2px;
-                    left: 0;
+                    @include absolute($top: -2px, $left: 0);
                     width: 0;
                     height: 2px;
                     background-color: $clr-primary;

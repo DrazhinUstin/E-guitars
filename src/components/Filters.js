@@ -26,6 +26,7 @@ const Filters = () => {
                 {brands.map((brand, index) => {
                     return (
                         <button
+                            type='button'
                             key={index}
                             name='brand'
                             data-value={brand}
@@ -53,6 +54,7 @@ const Filters = () => {
                     {colors.map((color, index) => {
                         return (
                             <button
+                                type='button'
                                 key={index}
                                 name='color'
                                 data-value={color}
@@ -98,7 +100,7 @@ const Filters = () => {
                 />
                 <label htmlFor='stock'>in stock</label>
             </div>
-            <button className='btn' onClick={clearFilters}>
+            <button type='button' className='btn' onClick={clearFilters}>
                 clear filters
             </button>
         </form>

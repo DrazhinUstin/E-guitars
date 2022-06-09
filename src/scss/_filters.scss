@@ -3,15 +3,14 @@
     grid-template-columns: 200px 1fr;
     gap: 4rem 2rem;
     align-items: flex-start;
-    @media screen and (max-width: 800px) {
+    @include for-size(md) {
         grid-template-columns: unset;
     }
 }
 
 .filters {
-    position: sticky;
-    top: 1rem;
-    @media screen and (max-width: 800px) {
+    @include sticky($top: 1rem);
+    @include for-size(md) {
         position: unset;
     }
     &-field {
@@ -41,7 +40,7 @@
             button {
                 width: 1.5rem;
                 height: 1.5rem;
-                @extend %grid-center;
+                @include grid-center;
                 border: none;
                 box-shadow: $shadow-dark;
                 color: $white;
@@ -80,8 +79,7 @@
                 }
                 &::after {
                     content: '';
-                    position: absolute;
-                    left: calc(1.25rem / 2);
+                    @include absolute($left: calc(1.25rem / 2));
                     transform: translateX(-50%) scale(0);
                     width: 1rem;
                     height: 1rem;
